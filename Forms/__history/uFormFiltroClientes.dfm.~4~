@@ -1,0 +1,37 @@
+inherited FormFiltroCliente: TFormFiltroCliente
+  Caption = 'Filtro de Clientes'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    inherited Label1: TLabel
+      Width = 81
+      Caption = 'Nome do Cliente '
+      ExplicitWidth = 81
+    end
+    inherited Edit1: TEdit
+      Width = 401
+      ExplicitWidth = 401
+    end
+    inherited btnFiltro: TButton
+      Cursor = crHandPoint
+    end
+  end
+  object DBGrid1: TDBGrid [1]
+    Left = 0
+    Top = 105
+    Width = 927
+    Height = 303
+    Align = alClient
+    DataSource = dsFiltro
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  inherited fdQryFiltro: TFDQuery
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE ')
+  end
+end

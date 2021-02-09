@@ -1,0 +1,7 @@
+unit uBiblioteca;
+
+interface
+  procedure setValorIni(pLocal, )
+implementation
+
+end.

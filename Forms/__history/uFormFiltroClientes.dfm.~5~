@@ -1,0 +1,91 @@
+inherited FormFiltroCliente: TFormFiltroCliente
+  Caption = 'Filtro de Clientes'
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    inherited Label1: TLabel
+      Width = 81
+      Caption = 'Nome do Cliente '
+      ExplicitWidth = 81
+    end
+    inherited edtFIltro: TEdit
+      Width = 401
+      ExplicitWidth = 401
+    end
+    inherited btnFiltro: TButton
+      Cursor = crHandPoint
+      OnClick = btnFiltroClick
+    end
+  end
+  object DBGrid1: TDBGrid [1]
+    Left = 0
+    Top = 105
+    Width = 927
+    Height = 303
+    Align = alClient
+    DataSource = dsFiltro
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID_CLIENTE'
+        Title.Caption = 'Codigo '
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'RAZAO_SOCIAL'
+        Title.Caption = 'Raz'#227'o Social'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'FANTASIA'
+        Title.Caption = 'Fantasia'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CPF_CNPJ'
+        Title.Caption = 'CPF / CNPJ'
+        Width = 80
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TIPO_FJ'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME'
+        Title.Caption = 'Nome '
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'EMAIL'
+        Title.Caption = 'E-Mail'
+        Width = 200
+        Visible = True
+      end>
+  end
+  inherited fdQryFiltro: TFDQuery
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE ')
+  end
+  inherited FDTransaction: TFDTransaction
+    Left = 752
+    Top = 304
+  end
+end

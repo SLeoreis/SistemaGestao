@@ -1,0 +1,21 @@
+inherited FormFiltroCliente: TFormFiltroCliente
+  Caption = 'Filtro de Clientes'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    inherited Label1: TLabel
+      Width = 81
+      Caption = 'Nome do Cliente '
+      ExplicitWidth = 81
+    end
+    inherited Edit1: TEdit
+      Width = 401
+      Text = ''
+      ExplicitWidth = 401
+    end
+    inherited Button1: TButton
+      Cursor = crHandPoint
+      Caption = 'Buscar'
+    end
+  end
+end

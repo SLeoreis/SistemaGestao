@@ -1,0 +1,72 @@
+inherited FormFiltroProduto: TFormFiltroProduto
+  Caption = 'Filtro Produto'
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid [1]
+    Left = 0
+    Top = 105
+    Width = 927
+    Height = 303
+    Align = alClient
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  inherited fdQryFiltro: TFDQuery
+    SQL.Strings = (
+      'SELECT * FROM PRODUTO')
+    object fdQryFiltroID_PRODUTO: TIntegerField
+      FieldName = 'ID_PRODUTO'
+      Origin = 'ID_PRODUTO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object fdQryFiltroDESCRICAO: TWideStringField
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      Size = 60
+    end
+    object fdQryFiltroQTD: TSingleField
+      FieldName = 'QTD'
+      Origin = 'QTD'
+    end
+    object fdQryFiltroCUSTO: TSingleField
+      FieldName = 'CUSTO'
+      Origin = 'CUSTO'
+    end
+    object fdQryFiltroV_UNITARIO: TSingleField
+      FieldName = 'V_UNITARIO'
+      Origin = 'V_UNITARIO'
+    end
+    object fdQryFiltroUNIDADE: TWideStringField
+      FieldName = 'UNIDADE'
+      Origin = 'UNIDADE'
+      Size = 4
+    end
+    object fdQryFiltroPESO_LIQUIDO: TSingleField
+      FieldName = 'PESO_LIQUIDO'
+      Origin = 'PESO_LIQUIDO'
+    end
+    object fdQryFiltroPESO_BRUTO: TSingleField
+      FieldName = 'PESO_BRUTO'
+      Origin = 'PESO_BRUTO'
+    end
+    object fdQryFiltroFABRICANTE: TWideStringField
+      FieldName = 'FABRICANTE'
+      Origin = 'FABRICANTE'
+      Size = 60
+    end
+    object fdQryFiltroMARCA_MODELO: TWideStringField
+      FieldName = 'MARCA_MODELO'
+      Origin = 'MARCA_MODELO'
+      Size = 255
+    end
+    object fdQryFiltroID_FORNCEDOR: TIntegerField
+      FieldName = 'ID_FORNCEDOR'
+      Origin = 'ID_FORNCEDOR'
+    end
+  end
+end
